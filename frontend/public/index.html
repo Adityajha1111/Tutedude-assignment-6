@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Flask + Express Demo</title>
+</head>
+<body>
+<h1>Flask + Express Demo Frontend</h1>
+<div id="result">calling backend...</div>
+<script>
+fetch('/api/')
+.then(r => r.json())
+.then(j => document.getElementById('result').innerText = JSON.stringify(j))
+.catch(e => document.getElementById('result').innerText = 'Error: ' + e);
+</script>
+</body>
+</html>
